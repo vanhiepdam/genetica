@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 orbs:
   python: circleci/python@0.2.1
 
@@ -9,8 +9,7 @@ jobs:
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: genetica
-    executor:
-      name: python/default
+    executor: python/default
     steps:
       - checkout
       - python/load-cache
