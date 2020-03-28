@@ -13,7 +13,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_DB: genetica
     executor:
-      - python/default
+      name: python/default
     steps:
       - checkout
       - python/load-cache
