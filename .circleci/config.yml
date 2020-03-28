@@ -4,11 +4,11 @@ orbs:
 
 jobs:
   build-and-test:
-    docker:
-      - image: circleci/postgres:12.1-alpine-ram
-        environment:
-          POSTGRES_USER: postgres
-          POSTGRES_DB: genetica
+#    docker:
+#      - image: circleci/postgres:12.1-alpine-ram
+#        environment:
+#          POSTGRES_USER: postgres
+#          POSTGRES_DB: genetica
     executor: python/default
     steps:
       - checkout
@@ -16,9 +16,9 @@ jobs:
       - python/install-deps
       - python/save-cache
 
-      - run:
-          name: Wait for db
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+#      - run:
+#          name: Wait for db
+#          command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
       - run:
           name: run tests
