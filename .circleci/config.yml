@@ -10,7 +10,6 @@ jobs:
 
       - image: circleci/postgres:12.1-alpine-ram
 
-    executor: python/default
     steps:
       - checkout
 
