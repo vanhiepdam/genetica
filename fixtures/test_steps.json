@@ -1,0 +1,38 @@
+[
+  {
+    "model": "specimens.TestStep",
+    "fields": {
+      "name": "đã thu mẫu của khách",
+      "description": "đã thu mẫu của khách",
+      "created_at": "2020-03-28 00:00:00",
+      "updated_at": "2020-03-28 00:00:00"
+    }
+  },
+  {
+    "model": "specimens.TestStep",
+    "fields": {
+      "name": "đã gửi sang phòng lab bên Mỹ",
+      "description": "đã gửi sang phòng lab bên Mỹ",
+      "created_at": "2020-03-28 00:00:00",
+      "updated_at": "2020-03-28 00:00:00"
+    }
+  },
+  {
+    "model": "specimens.TestStep",
+    "fields": {
+      "name": "đã tách chiết DNA",
+      "description": "đã tách chiết DNA",
+      "created_at": "2020-03-28 00:00:00",
+      "updated_at": "2020-03-28 00:00:00"
+    }
+  },
+  {
+    "model": "specimens.TestStep",
+    "fields": {
+      "name": "đã validate thông tin DNA",
+      "description": "đã validate thông tin DNA",
+      "created_at": "2020-03-28 00:00:00",
+      "updated_at": "2020-03-28 00:00:00"
+    }
+  }
+]
