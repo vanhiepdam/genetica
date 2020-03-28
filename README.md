@@ -1,4 +1,4 @@
-# DJANGO GENETICA TEST [![CircleCI Status](https://circleci.com/gh/vanhiepdam/genetica.svg?style=svg)](https://github.com/vanhiepdam/genetica)
+# DJANGO GENETICA TEST [![CircleCI Status](https://circleci.com/gh/vanhiepdam/genetica.svg?style=svg)](https://github.com/vanhiepdam/genetica) [![Known Vulnerabilities](https://snyk.io/test/github/vanhiepdam/genetica/badge.svg?targetFile=requirements.txt)](https://github.com/vanhiepdam/genetica)
 
 ## Introduction
 
