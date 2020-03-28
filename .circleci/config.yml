@@ -1,24 +1,36 @@
 version: 2.1
-orbs:
-  python: circleci/python@0.2.1
 
 jobs:
   build-and-test:
-#    docker:
-#      - image: circleci/postgres:12.1-alpine-ram
-#        environment:
-#          POSTGRES_USER: postgres
-#          POSTGRES_DB: genetica
+    docker:
+      - image: circleci/python:3.6.8-jessie
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: genetica
+
+      - image: circleci/postgres:12.1-alpine-ram
+
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
 
-#      - run:
-#          name: Wait for db
-#          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - restore_cache:
+          keys:
+            - pip-cache-{{ checksum "requirements.txt" }}
+
+      - run:
+          name: Install Dependencies
+          command: |
+            pip install -r requirements.txt
+
+      - save-cache:
+          key: pip-cache-{{ checksum "requirements.txt" }}
+          paths:
+            - /home/circleci/.local/lib/
+
+      - run:
+          name: Wait for db
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
       - run:
           name: run tests
