@@ -1,3 +1,7 @@
 genetica/local_settings.py
 key.pub
 virtualenv/*
+__pycache__/
+.idea
+*.pyc
+*.egg-info
