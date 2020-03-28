@@ -23,7 +23,7 @@ jobs:
           command: |
             pip install -r requirements.txt
 
-      - save-cache:
+      - save_cache:
           key: pip-cache-{{ checksum "requirements.txt" }}
           paths:
             - /home/circleci/.local/lib/
