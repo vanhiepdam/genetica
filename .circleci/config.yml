@@ -4,9 +4,6 @@ orbs:
 
 jobs:
   build-and-test:
-    branches:
-      only:
-        - master
     docker:
       - image: circleci/postgres:12.1-alpine-ram
         environment:
