@@ -3,7 +3,9 @@ from rest_framework.test import APITestCase
 
 from genetica.auth.models import User
 from genetica.auth.serializers import UserSerializer
-from genetica.reports.models import TraitTemplate
+from genetica.reports.models import TraitTemplate, Report
+from genetica.reports.serializers import ReportSerializer
+from genetica.services.models import Service
 from genetica.user_profiles.models import UserProfile
 
 
@@ -15,12 +17,32 @@ class ReportTest(APITestCase):
             'email': 'user@user.com',
             'password': '1'
         })
-        UserProfile.objects.create(
+        self.profile = UserProfile.objects.create(
             name="Profile 1",
             description="Profile 1",
             account=user,
         )
-        TraitTemplate.objects.create()
+        service = Service.objects.create(
+            name="Service 1",
+            description="service 1",
+            price=1.0
+        )
+        Report.objects.create(
+            name="report 1",
+            description="report 1",
+            meta={},
+            service=service,
+            user_profile=self.profile,
+            state="ready"
+        )
+        Report.objects.create(
+            name="report 1",
+            description="report 1",
+            meta={},
+            service=service,
+            user_profile=self.profile,
+            state="prepare"
+        )
 
         self.obtain_tokens()
 
@@ -35,12 +57,12 @@ class ReportTest(APITestCase):
         auth_response = self.client.post(auth_url, data=data)
         return 'Bearer ' + auth_response.data['access']
 
-    def test_list_user(self):
-        url = reverse('user-list')
+    def test_list_ready_reports(self):
+        url = reverse('report-ready')
 
-        self.client.credentials(HTTP_AUTHORIZATION=self.admin_token)
+        self.client.credentials(HTTP_AUTHORIZATION=self.user_token)
         response = self.client.get(url)
 
-        users = User.objects.all()
+        reports = Report.objects.filter(user_profile=self.profile, state='ready')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(UserSerializer(instance=users, many=True).data, response.data['results'])
+        self.assertEqual(ReportSerializer(instance=reports, many=True).data, response.data['results'])
