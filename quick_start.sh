@@ -8,6 +8,7 @@ pip install -r requirements.txt
 
 echo "Creating database"
 createdb genetica
+python manage.py migrate
 
 echo "Start faking data"
 python load_data.py
