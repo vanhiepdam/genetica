@@ -11,7 +11,8 @@ PREREQUISITE:
 - For testing correctly, please make sure the postgres process is running at localhost:5432. username=postgres, password=:BLANK
 - python 3.6
 
-Run script `./quickstart.sh`
+1. Clone this repository `git clone https://github.com/vanhiepdam/genetica.git`
+2. Run script `./quickstart.sh`
 
 ## Usage
 ### Accounts:
