@@ -1,4 +1,4 @@
-# DJANGO GENETICA TEST [![CircleCI Status](https://circleci.com/gh/vanhiepdam/genetica.svg?style=svg)](https://github.com/vanhiepdam/genetica) [![Known Vulnerabilities](https://snyk.io/test/github/vanhiepdam/genetica/badge.svg?targetFile=requirements.txt)](https://github.com/vanhiepdam/genetica)
+# DJANGO GENETICA TEST [![CircleCI Status](https://circleci.com/gh/vanhiepdam/genetica.svg?style=svg)](https://github.com/vanhiepdam/genetica) [![Known Vulnerabilities](https://snyk.io/test/github/vanhiepdam/genetica/badge.svg?targetFile=requirements.txt)](https://github.com/vanhiepdam/genetica) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/30c17db9e96449a18428a9a47b7aa793)](https://www.codacy.com/manual/vanhiepdam/genetica?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vanhiepdam/genetica&amp;utm_campaign=Badge_Grade)
 
 ## Introduction
 
