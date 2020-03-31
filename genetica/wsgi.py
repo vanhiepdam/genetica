@@ -1,5 +1,4 @@
-"""
-WSGI config for genetica project.
+"""WSGI config for genetica project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

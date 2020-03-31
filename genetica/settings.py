@@ -21,8 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = """
------BEGIN RSA PRIVATE KEY-----
+SECRET_KEY = """-----BEGIN RSA PRIVATE KEY-----
 MIICWwIBAAKBgFbKy/72cEpDDXOvkQIIMii53b/71zo0Ct03O4QaSht4PpoFobF0
 3lShkY3/zGWtRPxwvVB/FDv8tAlQ0KuMDJvX3S7N3Xbnv9sMfUDyBf23/9A7o9JC
 4aKzWWBE+CVTktaswnkVRFWn+DAihSqs7Cl3pQzYMb82qRVJDAehCeppAgMBAAEC
@@ -36,23 +35,20 @@ eF/egSxmaXG2+UkOOHDeDHcj+4jiskZwMDvINi/woTuceql+ZcGgOLI1AkAR2ZxD
 +Qwv7giy7tOUKAyhtqkFXAJq2MV94IOzzqUkJ6Qst7OoRr6KRM5HpMW/ttSWpauO
 co4bcnE9z2/CTw8ZAkEAml268J8MB0ytUddx9QoSiRhO18DixuOYvTx4PMHP8bQ/
 bder0bdRkl8wvgp+uuGTBg+eSqJPf7JRtUmcdKY/wA==
------END RSA PRIVATE KEY-----
-"""
+-----END RSA PRIVATE KEY-----"""
 
-VERIFY_KEY = """
------BEGIN PUBLIC KEY-----
+VERIFY_KEY = """-----BEGIN PUBLIC KEY-----
 MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgFbKy/72cEpDDXOvkQIIMii53b/7
 1zo0Ct03O4QaSht4PpoFobF03lShkY3/zGWtRPxwvVB/FDv8tAlQ0KuMDJvX3S7N
 3Xbnv9sMfUDyBf23/9A7o9JC4aKzWWBE+CVTktaswnkVRFWn+DAihSqs7Cl3pQzY
 Mb82qRVJDAehCeppAgMBAAE=
------END PUBLIC KEY-----
-"""
+-----END PUBLIC KEY-----"""
 # SECURITY WARNING: don't run with debug turned on in production!
 try:
     from .local_settings import DEBUG
 
     DEBUG = DEBUG
-except:
+except ImportError:
     DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
@@ -154,7 +150,7 @@ try:
     from .local_settings import DATABASES
 
     DATABASES = DATABASES
-except:
+except ImportError:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',

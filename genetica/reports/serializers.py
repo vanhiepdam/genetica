@@ -20,6 +20,7 @@ class ReportSerializer(serializers.ModelSerializer):
         return queryset.select_related('service', 'user_profile', 'user_profile__account')
 
     class Meta:
+        """Meta class"""
         model = Report
         fields = (
             'id',

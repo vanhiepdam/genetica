@@ -41,4 +41,5 @@ class Specimen(ModelBase):
     )
 
     def __str__(self):
+        """to string"""
         return self.name

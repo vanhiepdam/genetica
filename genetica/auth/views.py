@@ -14,9 +14,7 @@ class UserViewset(viewsets.ModelViewSet):
     lookup_field = 'username'
 
     def get_permissions(self):
-        """
-        Instantiates and returns the list of permissions that this view requires.
-        """
+        """Instantiates and returns the list of permissions that this view requires."""
         if self.action in ['list', 'destroy']:
             permission_classes = [IsAuthenticated]
         elif self.action in ['retrieve', 'update', 'partial_update']:

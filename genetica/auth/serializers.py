@@ -10,6 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
     email = serializers.CharField()
 
     class Meta:
+        """Meta class"""
         model = User
         fields = (
             'id',
@@ -24,6 +25,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
     password = serializers.CharField()
 
     class Meta:
+        """Meta class"""
         model = User
         fields = (
             'username',
@@ -37,6 +39,7 @@ class UpdateUserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(required=False)
 
     class Meta:
+        """Meta class"""
         model = User
         fields = (
             'email',

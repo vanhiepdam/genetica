@@ -6,19 +6,21 @@ This project is used only for test at Genetica
 
 ## Quickstart
 
-PREREQUISITE: 
-  - Postgresql was already installed
-  - For testing correctly, please make sure the postgres process is running at localhost:5432. username=postgres, password=:BLANK
-  - python 3.6
+##### PREREQUISITE
 
- 1. Clone this repository `git clone https://github.com/vanhiepdam/genetica.git`
- 2. Run script `./quickstart.sh`
+- Postgresql was already installed
+- For testing correctly, please make sure the postgres process is running at localhost:5432. username=postgres, password=:BLANK
+- python 3.6
+
+1. Clone this repository `git clone https://github.com/vanhiepdam/genetica.git`
+2. Run script `./quickstart.sh`
 
 ## Usage
 
 ### Accounts
-  - admin: admin/admin
-  - user: user/admin
+
+- admin: admin/admin
+- user: user/admin
 
 ### Get token
 
@@ -36,7 +38,7 @@ URL `api/1/reports?state=[prepare|ready]`
 
 headers `Authorization: Bearer :access_token`
 
-  - Another special api:
+- Another special api:
 
 Method `GET`
 
