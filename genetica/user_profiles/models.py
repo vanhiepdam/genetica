@@ -21,5 +21,6 @@ class UserProfile(ModelBase):
     )
 
     def __str__(self):
-        """to string"""
+        """To string
+        """
         return self.name
