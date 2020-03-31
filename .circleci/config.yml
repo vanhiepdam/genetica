@@ -33,8 +33,11 @@ jobs:
 
       - run:
           name: run tests
-          command: python manage.py test
-      
+          command: coverage run --source='genetica' manage.py test
+
+      - run:
+          name: create report
+          command: coverage report
       - run:
           name: upload report
           command: bash <(curl -s https://codecov.io/bash)
