@@ -12,7 +12,7 @@ class TraitTemplate(ModelBase):
     level = models.IntegerField(default=0)
 
     def __str__(self):
-        """To string
+        """To string.
         """
         return "{}_{}".format(self.name, self.level)
 
@@ -48,7 +48,7 @@ class Report(ModelBase):
     )
 
     def __str__(self):
-        """To string
+        """To string.
         """
         return self.name
 
@@ -70,6 +70,6 @@ class Trait(ModelBase):
     )
 
     def __str__(self):
-        """To string
+        """To string.
         """
         return self.name

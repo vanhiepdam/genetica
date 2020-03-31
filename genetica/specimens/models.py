@@ -10,7 +10,7 @@ class TestStep(ModelBase):
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        """To string
+        """To string.
         """
         return self.name
 
@@ -43,6 +43,6 @@ class Specimen(ModelBase):
     )
 
     def __str__(self):
-        """To string
+        """To string.
         """
         return self.name

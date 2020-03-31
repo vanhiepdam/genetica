@@ -9,6 +9,6 @@ class Service(ModelBase):
     price = models.FloatField(default=0.1)
 
     def __str__(self):
-        """To string
+        """To string.
         """
         return self.name

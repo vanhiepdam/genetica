@@ -44,7 +44,8 @@ class User(AbstractBaseUser, PermissionsMixin, ModelBase):
     objects = UserManager()
 
     def __str__(self):
-        """To string"""
+        """To string.
+        """
         return self.username
 
     @property
