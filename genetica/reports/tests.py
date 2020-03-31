@@ -2,8 +2,7 @@ from django.urls import reverse
 from rest_framework.test import APITestCase
 
 from genetica.auth.models import User
-from genetica.auth.serializers import UserSerializer
-from genetica.reports.models import TraitTemplate, Report
+from genetica.reports.models import Report
 from genetica.reports.serializers import ReportSerializer
 from genetica.services.models import Service
 from genetica.user_profiles.models import UserProfile

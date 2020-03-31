@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.exceptions import ValidationError
-from rest_framework.permissions import IsAdminUser, IsAuthenticated
+from rest_framework.permissions import IsAuthenticated
 
 from genetica.auth.serializers import UserSerializer, CreateUserSerializer, UpdateUserSerializer
 from genetica.auth.services import UserService
